@@ -1,25 +1,25 @@
-version: '3.8'
+version: "3.8"
 
 services:
-	# Next.js Development Server
-	app:
-		build:
-			context: .
-			dockerfile: Dockerfile.dev
-		container_name: nextjs-dev
-		ports:
-			- "3000:3000"
-		volumes:
-			- .:/app
-			- /app/node_modules
-		environment:
-			- NODE_ENV=development
-			- NEXT_PUBLIC_API_URL=http://localhost:3000
-		command: npm run dev
-		restart: unless-stopped
-		networks:
-			- nextjs-network
+  # Next.js Development Server
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: nextjs-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://localhost:3000
+    command: npm run dev
+    restart: unless-stopped
+    networks:
+      - nextjs-network
 
 networks:
-	nextjs-network:
-		driver: bridge
+  nextjs-network:
+    driver: bridge

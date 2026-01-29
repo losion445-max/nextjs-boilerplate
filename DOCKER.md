@@ -9,14 +9,14 @@ This project includes Docker support for both development and production environ
 
 ## Files Explained
 
-| File | Purpose |
-|------|---------|
-| `Dockerfile` | Production-optimized multi-stage build |
-| `Dockerfile.dev` | Development image with hot reload |
-| `docker-compose.yml` | Production configuration (with optional Nginx) |
-| `docker-compose.dev.yml` | Development configuration |
-| `nginx.conf` | Nginx reverse proxy configuration |
-| `.dockerignore` | Files to exclude from Docker image |
+| File                     | Purpose                                        |
+| ------------------------ | ---------------------------------------------- |
+| `Dockerfile`             | Production-optimized multi-stage build         |
+| `Dockerfile.dev`         | Development image with hot reload              |
+| `docker-compose.yml`     | Production configuration (with optional Nginx) |
+| `docker-compose.dev.yml` | Development configuration                      |
+| `nginx.conf`             | Nginx reverse proxy configuration              |
+| `.dockerignore`          | Files to exclude from Docker image             |
 
 ## Quick Start
 
@@ -36,7 +36,7 @@ docker-compose -f docker-compose.dev.yml logs -f
 docker-compose -f docker-compose.dev.yml down
 ```
 
-Access the app at: **http://localhost:3000**
+Access the app at: [http://localhost:3000](http://localhost:3000)
 
 Changes to your code will automatically reload!
 
@@ -56,7 +56,7 @@ docker-compose logs -f
 docker-compose down
 ```
 
-Access the app at: **http://localhost:3000**
+Access the app at: [http://localhost:3000](http://localhost:3000)
 
 ## Production with Nginx Reverse Proxy
 
@@ -87,16 +87,16 @@ docker build -t nextjs-boilerplate:dev -f Dockerfile.dev .
 ```bash
 # Production
 docker run -p 3000:3000 \
-	-e NODE_ENV=production \
-	-e NEXT_PUBLIC_API_URL=http://localhost:3000 \
-	nextjs-boilerplate:latest
+  -e NODE_ENV=production \
+  -e NEXT_PUBLIC_API_URL=http://localhost:3000 \
+  nextjs-boilerplate:latest
 
 # Development
 docker run -p 3000:3000 \
-	-v "$(pwd):/app" \
-	-v /app/node_modules \
-	-e NODE_ENV=development \
-	nextjs-boilerplate:dev
+  -v "$(pwd):/app" \
+  -v /app/node_modules \
+  -e NODE_ENV=development \
+  nextjs-boilerplate:dev
 ```
 
 ## Useful Commands
@@ -148,6 +148,7 @@ The production `Dockerfile` uses 3 stages:
 3. **runtime** - Copy built app + run (minimal size)
 
 This approach:
+
 - ✅ Reduces final image size (smaller)
 - ✅ Improves security (dev deps excluded)
 - ✅ Faster deployments (smaller download)
@@ -166,10 +167,12 @@ docker ps
 ## Docker Compose Services
 
 **Production:**
+
 - `app` - Next.js application (port 3000)
 - `nginx` - Reverse proxy (port 80) - optional profile
 
 **Development:**
+
 - `app` - Next.js dev server with hot reload (port 3000)
 
 ## Troubleshooting
