@@ -4,7 +4,7 @@ A standard Git Flow workflow for managing features, releases, and hotfixes in th
 
 ## Branch Structure
 
-```
+```bash
 main                 # Production-ready code (stable releases)
 ├── develop         # Development branch (integration branch)
 ├── feature/*       # Feature branches (from develop)
@@ -72,22 +72,27 @@ On GitHub:
 
 **PR Description Template:**
 
-```
+```markdown
 ## Description
+
 Brief description of what this feature does.
 
 ## Changes
+
 - Change 1
 - Change 2
 - Change 3
 
 ## Testing
+
 How to test these changes.
 
 ## Screenshots (if UI changes)
+
 Add screenshots here.
 
 ## Related Issues
+
 Closes #123
 ```
 

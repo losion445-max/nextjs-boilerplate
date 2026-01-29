@@ -39,7 +39,7 @@ npm start
 
 ## Project Structure
 
-```
+```bash
 src/
 └── app/
     ├── components/      # React components (create as needed)
@@ -120,4 +120,6 @@ NEXT_PUBLIC_API_URL=http://localhost:3000
 
 ---
 
-**Created with ❤️ | Minimal boilerplate for modern web development**
+## Credits
+
+Created with ❤️ | Minimal boilerplate for modern web development
