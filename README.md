@@ -41,30 +41,32 @@ npm start
 
 ```
 src/
-├── app/
-│   ├── components/      # React components
-│   ├── api/            # API routes
-│   ├── layout.tsx      # Root layout
-│   ├── page.tsx        # Home page
-│   ├── globals.css     # Global styles
-│   └── favicon.ico
-├── lib/                # Utilities & helpers
-└── types/              # TypeScript types
+└── app/
+    ├── components/      # React components (create as needed)
+    ├── api/            # API routes (create as needed)
+    ├── layout.tsx      # Root layout
+    ├── page.tsx        # Home page
+    ├── globals.css     # Global styles
+    └── favicon.ico
 
 .vscode/               # VS Code configuration
 ├── settings.json      # Editor settings
 ├── extensions.json    # Recommended extensions
 └── launch.json        # Debugger config
 
-.env.local             # Environment variables
-.eslintrc.json         # ESLint rules
-.prettierrc.json       # Prettier formatting
-requests.http          # API testing (Thunder Client)
+Configuration Files:
+├── .env.local         # Environment variables
+├── .eslintrc.json     # ESLint rules
+├── .prettierrc.json   # Prettier formatting
+├── tsconfig.json      # TypeScript settings
+├── next.config.ts     # Next.js configuration
+└── requests.http      # API testing examples
 ```
 
 ## Tools & Extensions
 
 **Installed Extensions:**
+
 - ESLint - Code quality checking
 - Prettier - Auto code formatter
 - Tailwind CSS IntelliSense - Class autocomplete
