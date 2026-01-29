@@ -73,9 +73,18 @@
 		"revalidate"
 	],
 	"files.exclude": {
-		"**/.next": true,
 		"**/node_modules": true,
-		"**/.git": true
+		"**/.git": true,
+		"**/.vscode": true, // настройки редактора // все env файлы
+		"**/.*": true,
+		"**/.env*": false,
+		"**/dist": true, // сборки
+		"**/.next": true, // Next.js сборки
+		"**/Dockerfile*": true, // Docker файлы
+		"**/docker-compose*.yml": true, // Docker Compose
+		"**/package-lock.json": true, // lock файлы
+		"**/yarn.lock": true, // lock файлы yarn
+		"**/pnpm-lock.yaml": true // lock файлы pnpm
 	},
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
