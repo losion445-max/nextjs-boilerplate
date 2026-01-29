@@ -1,0 +1,45 @@
+### Get Home Page
+GET http://localhost:3000
+
+### Get API Health Check
+GET http://localhost:3000/api/health
+
+### Create User
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+	"name": "John Doe",
+	"email": "john@example.com"
+}
+
+### Update User
+PUT http://localhost:3000/api/users/1
+Content-Type: application/json
+
+{
+	"name": "Jane Doe",
+	"email": "jane@example.com"
+}
+
+### Delete User
+DELETE http://localhost:3000/api/users/1
+
+### Get Users with Query Parameters
+GET http://localhost:3000/api/users?page=1&limit=10
+
+### Request with Authorization
+GET http://localhost:3000/api/protected
+Authorization: Bearer YOUR_TOKEN_HERE
+
+### Request with Multiple Headers
+GET http://localhost:3000/api/data
+Content-Type: application/json
+Authorization: Bearer token123
+X-Custom-Header: custom-value
+
+### Form Data Request
+POST http://localhost:3000/api/upload
+Content-Type: application/x-www-form-urlencoded
+
+name=John&email=john@example.com

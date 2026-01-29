@@ -1,0 +1,12 @@
+{
+	"env": {
+		"browser": true,
+		"node": true
+	},
+	"extends": ["next/core-web-vitals"],
+	"rules": {
+		"react/react-in-jsx-scope": "off",
+		"react-hooks/exhaustive-deps": "warn",
+		"@next/next/no-img-element": "warn"
+	}
+}

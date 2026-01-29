@@ -1,0 +1,73 @@
+{
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"prettier.semi": true,
+	"prettier.singleQuote": false,
+	"prettier.trailingComma": "es5",
+	"prettier.bracketSpacing": true,
+	"prettier.arrowParens": "always",
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		}
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		}
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		}
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+	"eslint.format.enable": true,
+	"tailwindCSS.classAttributes": ["class", "className", "classList", "ngClass"],
+	"tailwindCSS.experimental.classRegex": [
+		["cva\\(([^)]*)\\)", "(?:'|\"|`|{)([^']*)(?:'|\"|`|})"]
+	],
+	"codeSpellChecker.ignoreWords": [
+		"vscode",
+		"tailwind",
+		"eslint",
+		"prisma",
+		"nextjs"
+	],
+	"files.exclude": {
+		"**/.next": true,
+		"**/node_modules": true,
+		"**/.git": true
+	},
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.wordWrap": "on",
+	"editor.rulers": [80, 120],
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"search.exclude": {
+		"node_modules": true,
+		".next": true
+	}
+}
